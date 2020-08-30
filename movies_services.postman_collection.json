@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "5af579ea-cb99-44c8-8476-20f3e8f8bb4d",
+		"name": "Servicios Películas",
+		"description": "Comprobar los métodos de consumo básicos HTTP GET, PUT, POST, DELETE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET/movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/movies/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movies/a8c6c9fc-0107-494f-83ad-9ceadb11dc35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"a8c6c9fc-0107-494f-83ad-9ceadb11dc35"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/movies/id_not_valid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movies/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/movies?year=1997",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movies?year=1997&year=2009",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "1997"
+						},
+						{
+							"key": "year",
+							"value": "2009"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/movies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"title\":\"Piratas del Caribe\",\n   \"year\":2001,\n   \"cover\":\"http://dummyimage.com/130x249.png/ff4444/ffffff\",\n   \"description\":\"Esta película trata sobre piratas en búsqueda de un tesoro perdido\",\n   \"duration\":220\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/a8c6c9fc-0107-494f-83ad-9ceadb11dc35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"a8c6c9fc-0107-494f-83ad-9ceadb11dc35"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT/movies/id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"title\":\"Piratas del Caribe II\",\n   \"year\":2001,\n   \"cover\":\"http://dummyimage.com/130x249.png/ff4444/ffffff\",\n   \"description\":\"Piratas en búsqueda de un tesoro perdido en el Caribe\",\n   \"duration\":220,\n   \"tags\": [ \"Drama\", \"Action\" ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/123456789",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"123456789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE/movies/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movies/123456789",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"123456789"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
