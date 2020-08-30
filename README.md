@@ -10,6 +10,7 @@ Una vez que descargue o clone este respositorio debe ubicarse por consola en la 
 
 1. Instale de forma global json-server ejecutando por la terminal de comando la siguiente serie de instrucciones `npm install -g json-server`
 2. Ejecute la siguiente serie de instrucciones para escuchar por defecto en el puerto 3000 su API FAKE: `json-server --watch db.json`
-3. Enjoy :P!
+3. En el archivo **movies_services.postman_collection.json** se encuentran distintas peticiones de prueba para validar y explicar el funcionamiento de cada uno de los metodos HTTP, estos se pueden IMPORTAR facilmente haciendo uso de POSTMAN, de esta forma no debe crear las colecciones desde cero.
+4. ¡Enjoy! :P
 
 > NOTA: si desea cambiar el puerto por el cual desea levantar su API FAKE ejecute la siguiente serie de instrucciones en la terminal de comandos en el paso 2 `json-server --watch db.json --port 3004` , puede seleccionar su puerto de preferencia alternativo
